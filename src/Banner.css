@@ -1,0 +1,45 @@
+.banner {
+  color: white;
+  object-fit: contain;
+  height: 51vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.banner_contents {
+  margin-left: 3.2vh;
+  padding-top: 15.1vh;
+  height: 20.49vh;
+}
+
+.banner_title {
+  font-size: 5.4vh;
+  font-weight: 800;
+  padding-bottom: 0.6vh;
+}
+
+.banner_description {
+  padding-top: 2.3vh;
+  padding-bottom: 1vh;
+  font-size: 2vh;
+  max-width: 45vw;
+  line-height: 2.5vh;
+  -webkit-text-stroke: 0.08vh #2b3e4d;
+  text-align: justify;
+}
+
+.banner_button:hover {
+  background-color: #e07b39cc;
+  transition: all 0.2s;
+}
+
+.banner_fadeBottom {
+  height: 20vh;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    #0C151C,
+    #0C151C
+  );
+}

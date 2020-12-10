@@ -1,0 +1,23 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    height: 3vh;
+    padding: 2vh;
+    
+    transition: all 0.5s;
+}
+
+.nav_logo {
+    position: fixed;
+    width: 20vh;
+}
+
+.nav_black {
+    background-color: #0C151C;
+    transition-timing-function: ease-in;
+    transition: all 0.5s;
+    padding-left: 50%;
+    margin-left: -10vh;
+}

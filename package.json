@@ -1,0 +1,51 @@
+{
+  "name": "watchflix",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "axios": "^0.20.0",
+    "movie-trailer": "^2.0.6",
+    "overlay": "^1.2.5",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^16.14.0",
+    "react-scripts": "3.4.3",
+    "react-youtube": "^7.12.0",
+    "workbox-background-sync": "^6.0.2",
+    "workbox-broadcast-update": "^6.0.2",
+    "workbox-cacheable-response": "^6.0.2",
+    "workbox-core": "^6.0.2",
+    "workbox-expiration": "^6.0.2",
+    "workbox-google-analytics": "^6.0.2",
+    "workbox-navigation-preload": "^6.0.2",
+    "workbox-precaching": "^6.0.2",
+    "workbox-range-requests": "^6.0.2",
+    "workbox-routing": "^6.0.2",
+    "workbox-strategies": "^6.0.2",
+    "workbox-streams": "^6.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
