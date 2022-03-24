@@ -27,7 +27,12 @@ function AllMovies({ fetchUrl, searchParam }) {
         <div className="block">
             <div className="posters"></div>
             {searchParam.length !== 0 && movies.length > 0 ? 
-            movies.filter(movie => movie.title !== undefined && movie.poster_path !== null && movie.title.toLowerCase().includes(searchParam.toLowerCase())).map(filteredMovie => {
+            movies.filter(movie => movie.title !== undefined && 
+                movie.poster_path !== null && 
+                movie.name.toLowerCase().includes(searchParam.toLowerCase()) || 
+                movie.title.toLowerCase().includes(searchParam.toLowerCase()) || 
+                movie.original_name.toLowerCase()
+                .includes(searchParam.toLowerCase())).map(filteredMovie => {
               return (
                   <Movie key={filteredMovie.id} {...filteredMovie} />
               );
