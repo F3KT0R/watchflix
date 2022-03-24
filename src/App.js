@@ -1,29 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Row from "./Row";
 import requests from "./requests";
 import Banner from "./Banner";
 import Nav from "./Nav";
+import Search from "./Search";
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <div className="app">
       <Nav />
 
+      <input 
+      type="search" 
+      placeholder="Search for movies..." 
+      value={searchTerm}
+      className="search"
+      autoComplete="off"
+      onChange={handleOnChange}
+      />
+
       <Banner />
 
-      <Row
-        title="NETFLIX ORIGINALS"
-        fetchUrl={requests.fetchNetflixOriginals}
-        isLargeRow
-      />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romantic" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Drama" fetchUrl={requests.fetchDramaMovies} />
+      <Row title="TRENDING NOW" fetchUrl={requests.fetchTrending} searchParam={searchTerm}/>
+      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} searchParam={searchTerm}/>
+      <Row title="Action" fetchUrl={requests.fetchActionMovies} searchParam={searchTerm}/>
+      <Row title="Comedy" fetchUrl={requests.fetchComedyMovies} searchParam={searchTerm}/>
+      <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} searchParam={searchTerm}/>
+      <Row title="Drama" fetchUrl={requests.fetchDramaMovies} searchParam={searchTerm}/>
+  
+      <Search fetchUrl={`${requests.fetchSearch}&query=${searchTerm}`} searchParam={searchTerm}/>
     </div>
   );
 }

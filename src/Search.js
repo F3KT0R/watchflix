@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "./axios";
-import "./Row.css";
+import "./Search.css";
 import Movie from "./Movie";
 
-
 // creating a function for App.js
-function Row({ title, fetchUrl, searchParam }) {
+function AllMovies({ fetchUrl, searchParam }) {
   // re-structuring the code
   const [movies, setMovies] = useState([]); // creating a short tearm memory, a state
 
@@ -24,16 +23,19 @@ function Row({ title, fetchUrl, searchParam }) {
 
   return (
     <div>
-      <h2>{searchParam.length === 0 ? title : ''}</h2>
-      <div className="row">
-        <div className="row_posters"></div>
-        {searchParam.length === 0 && movies.length > 0 ? 
-        movies.map(movie => <Movie key={movie.id} {...movie} />) : 
-        ''
-        }
-      </div>
-    </div>
+        <h2 className="list_title">{searchParam.length !== 0 ? "Searching:" : ''}</h2>
+        <div className="block">
+            <div className="posters"></div>
+            {searchParam.length !== 0 && movies.length > 0 ? 
+            movies.filter(movie => movie.title !== undefined && movie.poster_path !== null && movie.title.toLowerCase().includes(searchParam.toLowerCase())).map(filteredMovie => {
+              return (
+                  <Movie key={filteredMovie.id} {...filteredMovie} />
+              );
+            }) : ''
+            }
+        </div>
+        </div>
   );
 }
 
-export default Row;
+export default AllMovies;

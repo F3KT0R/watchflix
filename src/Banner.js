@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "./axios";
-import requests from "./requests";
 import "./Banner.css";
+import requests from "./requests";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
@@ -9,16 +9,19 @@ function Banner() {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
-      setMovie(
-        request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
-        ]
-      );
-      return request;
-    }
-    fetchData();
+    const timer = setInterval(() => {
+      async function fetchData() {
+        const request = await axios.get(requests.fetchTrending);
+        setMovie(
+          request.data.results[
+            Math.floor(Math.random() * request.data.results.length - 1)
+          ]
+        );
+        return request;
+      }
+      fetchData();
+    }, 20000);
+    return() => clearTimeout(timer);
   }, []);
 
   // a function to cut of(truncate) very long descriptions

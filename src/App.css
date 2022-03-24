@@ -7,3 +7,29 @@
 .app {
   background-color: #0C151C;
 }
+
+.search {
+  z-index: 1;
+  display: flex;
+  position: relative;
+  float: right;
+  margin-right: 1vw;
+  margin-top: 1rem;
+  height: 3vh;
+  width: 16vw;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 1rem;
+  padding-left: 1vw;
+  color: #fff;
+  border: 0.1rem white solid;
+  text-shadow: 0.15rem 0.15rem #000;
+}
+
+.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+.search:focus {
+  outline: 0;
+}

@@ -1,0 +1,25 @@
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+}
+
+.posters {
+  position: flex; 
+  padding: 3rem;
+  padding-right: 0;
+  padding-left: 1rem;
+} 
+
+.block::-webkit-scrollbar {
+  display: none; 
+} 
+
+.list_title {
+  padding-top: 0;
+  margin-left: 3rem;
+  font-size: 4rem;
+  color: white;
+  margin: auto;
+  text-align: center;
+}

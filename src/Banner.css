@@ -9,7 +9,7 @@
 
 .banner_contents {
   margin-left: 3.2vh;
-  padding-top: 15.1vh;
+  padding-top: 13vh;
   height: 20.49vh;
 }
 
@@ -17,16 +17,18 @@
   font-size: 5.4vh;
   font-weight: 800;
   padding-bottom: 0.6vh;
+  text-shadow: 0.2rem 0.2rem #0C151C;
 }
 
 .banner_description {
   padding-top: 2.3vh;
   padding-bottom: 1vh;
   font-size: 2vh;
-  max-width: 45vw;
+  max-width: 30vw;
   line-height: 2.5vh;
   -webkit-text-stroke: 0.08vh #2b3e4d;
   text-align: justify;
+  text-shadow: 0.1rem 0.1rem #0C151C;
 }
 
 .banner_button:hover {
@@ -35,7 +37,7 @@
 }
 
 .banner_fadeBottom {
-  height: 20vh;
+  height: 30vh;
   background-image: linear-gradient(
     to bottom,
     transparent,
