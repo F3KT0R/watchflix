@@ -29,10 +29,8 @@ function AllMovies({ fetchUrl, searchParam }) {
             {searchParam.length !== 0 && movies.length > 0 ? 
             movies.filter(movie => movie.title !== undefined && 
                 movie.poster_path !== null && 
-                movie.name.toLowerCase().includes(searchParam.toLowerCase()) || 
-                movie.title.toLowerCase().includes(searchParam.toLowerCase()) || 
-                movie.original_name.toLowerCase()
-                .includes(searchParam.toLowerCase())).map(filteredMovie => {
+                movie.title.toLowerCase().includes(searchParam.toLowerCase()))
+                .map(filteredMovie => {
               return (
                   <Movie key={filteredMovie.id} {...filteredMovie} />
               );
