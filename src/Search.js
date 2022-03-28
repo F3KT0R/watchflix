@@ -36,6 +36,7 @@ function AllMovies({ fetchUrl, searchParam }) {
               );
             }) : ''
             }
+            {searchParam.length !== 0 & movies.length === 0 ? <h2 id="no_res" className="list_title">No movies were found based on your search term!</h2> : ''}
         </div>
         </div>
   );

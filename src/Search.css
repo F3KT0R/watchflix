@@ -23,3 +23,9 @@
   margin: auto;
   text-align: center;
 }
+
+#no_res {
+  padding-top: 15rem;
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
