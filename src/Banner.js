@@ -20,7 +20,7 @@ function Banner() {
         return request;
       }
       fetchData();
-    }, 20000);
+    }, 7000);
     return() => clearTimeout(timer);
   }, []);
 

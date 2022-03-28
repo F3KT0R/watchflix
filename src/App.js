@@ -35,7 +35,7 @@ function App() {
       <Row title="Horror" fetchUrl={requests.fetchHorrorMovies} searchParam={searchTerm}/>
       <Row title="Drama" fetchUrl={requests.fetchDramaMovies} searchParam={searchTerm}/>
   
-      <Search fetchUrl={`${requests.fetchSearch}&query=${searchTerm}`} searchParam={searchTerm}/>
+      <Search fetchUrl={`${requests.fetchSearch}&query=${searchTerm}`} searchParam={searchTerm.replace(/\s+/g, ' ').trim()}/>
     </div>
   );
 }

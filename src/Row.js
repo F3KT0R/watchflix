@@ -8,6 +8,7 @@ import Movie from "./Movie";
 function Row({ title, fetchUrl, searchParam }) {
   // re-structuring the code
   const [movies, setMovies] = useState([]); // creating a short tearm memory, a state
+  const [collapse, setCollapse] = useState();
 
   // code snippet that runs on a specific condition
   useEffect(() => {
@@ -24,12 +25,12 @@ function Row({ title, fetchUrl, searchParam }) {
 
   return (
     <div>
-      <h2>{searchParam.length === 0 ? title : ''}</h2>
+      <h2 onClick={() => setCollapse(!collapse)}>{searchParam.length === 0 ? title : ''}</h2>
       <div className="row">
         <div className="row_posters"></div>
-        {searchParam.length === 0 && movies.length > 0 ? 
+        {!collapse? searchParam.length === 0 && movies.length > 0 ? 
         movies.map(movie => <Movie key={movie.id} {...movie} />) : 
-        ''
+        '' : ''
         }
       </div>
     </div>

@@ -11,6 +11,7 @@
     "overlay": "^1.2.5",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.0",
+    "react-collapsed": "^3.3.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.4.3",
     "react-youtube": "^7.12.0",
