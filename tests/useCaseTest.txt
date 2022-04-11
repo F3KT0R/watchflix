@@ -1,0 +1,102 @@
+This file contains the testing of the Watchflix Progressive Web Application.
+By: Tibor Bálint
+The corresponding screenshots to the tests are named accordingly with the test ID value and are found in the same folder.
+
+
+ID:                     #1
+Name:                   Listing all movies
+Short Description:      All of the movie posters are loaded from the API and are viewable upon opening the web app.
+Goal:                   Viewability and useability of the site's functionality.
+Preconditions:          The web app should be opened.
+Success End Condition:  All of the called movie posters are displayed.
+Fall End Condition:     Movie posters are not correctly displayed or not displayed at all.
+Trigger:                On opening the web app. The API call is triggered and it pulls the needed data.
+Normal Flow:            1. opening the web app; 2. waiting for the posters to load
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #2
+Name:                   Searching for movies
+Short Description:      Upon typing into the search bar, the categories disappear and maximum 20 movie posters are listed based on the search parameter.
+Goal:                   Finding the wanted movie based on the search parameter.
+Preconditions:          The web app should be opened and there has to be a text typed into the searchbox.
+Success End Condition:  All of the found movie posters based on the search term are displayed and the categories are not visible.
+Fall End Condition:     Found movie posters are not correctly displayed or not displayed at all. Furthermore, no movies were found based on the search term, but there exists a movie with that title.
+Trigger:                On opening the web app. And typing in some text into the searchbox. The API call is triggered and it pulls the needed data and lists it.
+Normal Flow:            1. opening the web app; 2. typing in a search term into the searchbox; 3. waiting for it to be executed
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #3
+Name:                   Scrolling to the top of the page
+Short Description:      Upon clicking on the logo of the web app it automatically takes you to the top of the page.
+Goal:                   To automatically get to the top of the page.
+Preconditions:          The web app should be opened and the user shold scroll down the page.
+Success End Condition:  The click takes the user to the top of the page.
+Fall End Condition:     Upon clicking the logo nothing happens.
+Trigger:                When scrolled down the page the logo is in the middle of the site and upon clicking it the action gets triggered.
+Normal Flow:            1. opening the web app; 2. waiting for the posters to load; 3. scrolling down the page; 4. clicking the logo in the top middle part of the page
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #4
+Name:                   Viewing the trailer of a movie
+Short Description:      Upon clicking on one of the posters, a You Tube player appears beneath it and the trailer starts automatically.
+Goal:                   To view the trailer of a movie.
+Preconditions:          The web app should be opened and the user shold click on a movie poster.
+Success End Condition:  The You Tube player appears and the trailer starts playing.
+Fall End Condition:     Upon clicking the player doesn't appear or the wrong trailer starts playing.
+Trigger:                The clicking of the movie poster is the trigger.
+Normal Flow:            1. opening the web app; 2. waiting for the posters to load; 3. clicking on one of them
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #5
+Name:                   Typing in wrong characters
+Short Description:      Upon typing wrong characters into the search bar, the categories disappear and a text appears that "No movies were found based on your search term!".
+Goal:                   Not to list anything if the search term doesn't match anything and let the user know that the search term is not valid.
+Preconditions:          The web app should be opened and there has to be a text typed into the searchbox.
+Success End Condition:  The "No movies were found based on your search term!" text appears and nothing else gets listed.
+Fall End Condition:     If nothing gets displayed and there is no text either.
+Trigger:                On opening the web app. And typing in some text into the searchbox.
+Normal Flow:            1. opening the web app; 2. typing in a search term into the searchbox; 3. waiting for it to be executed
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #6
+Name:                   Working offline
+Short Description:      If the site loads and the internet connection is interrupted then the site can still be normally used.
+Goal:                   Not to list anything if the search term doesn't match anything and let the user know that the search term is not valid.
+Preconditions:          The web app should be opened and the movies should load.
+Success End Condition:  After losing connection the web app works normally to it's fullest extent.
+Fall End Condition:     The web app crashes and displays the familiar "There is no Internet connection text"
+Trigger:                On opening the web app. And losing the intenet connection
+Normal Flow:            1. opening the web app; 2. the content loads; 3. the internet gets disconnected
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed
+
+ID:                     #7
+Name:                   Installing the app
+Short Description:      The user should be able to install the web app.
+Goal:                   The installing of the web app onto the desktop.
+Preconditions:          The web app should be opened.
+Success End Condition:  After clicking the appropriate buttons in the URL field, the web app gets installed to the desktop with a clickable shortcut.
+Fall End Condition:     After clicking the appropriate buttons, the web app doesn't get installed at all. Or the buttons don't appear because the service worker is not functional.
+Trigger:                On opening the web app. And clicking the appropriate button Google Chrome install is automatically triggered.
+Normal Flow:            1. opening the web app; 2. click on the install button; 3. open the installed web application
+Date Tested:            2022-04-11
+Tested by:              Bálint Tibor
+Internet browser:       Google Chrome v. 100.0.4896.75
+Test Status:            Passed

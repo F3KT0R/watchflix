@@ -1,0 +1,14 @@
+This file contains the Lighthouse automatic testing of the Watchflix Progressive Web Application done in Google Chrome v. 100.0.4896.75.
+By: Tibor Bálint
+The screenshot that proves the running of this test is found in this same folder with a corresponding name. (lighthouse.png)
+
+Installable: Passed
+    - Web app manifest and service worker meet the installability requirements
+
+PWA Optimized: Passed
+    - Registers a service worker that controls page and start_url
+    - Configured for a custom splash screen
+    - Sets a theme color for the address bar
+    - Has a <meta name="viewport"> tag with width or initial-scale
+    - Provides a valid apple-touch-icon
+    - Manifest has a maskable icon
