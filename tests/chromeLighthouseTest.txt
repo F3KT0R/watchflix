@@ -2,13 +2,100 @@ This file contains the Lighthouse automatic testing of the Watchflix Progressive
 By: Tibor Bálint
 The screenshot that proves the running of this test is found in this same folder with a corresponding name. (lighthouse.png)
 
-Installable: Passed
-    - Web app manifest and service worker meet the installability requirements
+PWA:
 
-PWA Optimized: Passed
-    - Registers a service worker that controls page and start_url
-    - Configured for a custom splash screen
-    - Sets a theme color for the address bar
-    - Has a <meta name="viewport"> tag with width or initial-scale
-    - Provides a valid apple-touch-icon
-    - Manifest has a maskable icon
+    Installable: Passed
+        - Web app manifest and service worker meet the installability requirements
+
+    PWA Optimized: Passed
+        - Registers a service worker that controls page and start_url
+        - Configured for a custom splash screen
+        - Sets a theme color for the address bar
+        - Has a <meta name="viewport"> tag with width or initial-scale
+        - Provides a valid apple-touch-icon
+        - Manifest has a maskable icon
+
+Accessibility:  100/100
+
+    Passed audits:
+        - [aria-*] attributes match their roles
+        - [aria-hidden="true"] is not present on the document <body>
+        - [role]s have all required [aria-*] attributes
+        - [role] values are valid
+        - [aria-*] attributes have valid values
+        - [aria-*] attributesare valid and not misspelled
+        - Image elements have [alt] attributes
+        - Form elements have associated labels
+        - [user-scrollable="no"] is not used in the <meta name="viewport"> element and the [maximum-scale] attribute is not less than 5
+        - Background and foreground colors have a sufficient contrast ratio
+        - Document has a <title> element
+        - <html> element has a [lang] attribute
+        - <html> element has a valid value for its [lang] attribute
+        - No element has a [tabindex] value greater than 0
+        - Heading elements appear in a sequentially-descending order
+
+Best Practices:  92/100
+
+    Passed audits:
+        - Uses HTTPS
+        - Avoids requesting the geolocation permission on page load
+        - Avoids requesting the notification permission on page load
+        - Avoids front-end JavaScript libraries with known security vulnerabilities
+        - Allows users to paste into password fields
+        - Displays images with corrected aspect ratio
+        - Serves images with appropriate resolution
+        - Page has the HTML doctype
+        - Properly defines charset
+        - Avoids deprecated APIs
+        - No issues in the Issues panel in Chrome Devtools
+
+SEO:  100/100
+
+    Passed audits:
+        - Has a <meta name="viewport"> tag with width or initial-scale
+        - Document has a <title> element
+        - Document has a meta description
+        - Page has successful HTTP status code
+        - Links have descriptive text
+        - Links are crawlable
+        - Page isn't blocked from indexing
+        - Image elements have [alt] attributes
+        - Document has a valid hreflang
+        - Document avoids plugins
+
+Performance:  32/100
+    
+    Metrics:
+        - First Contentful Paint:   0.6 s
+        - Time to Interactive:      2.1 s
+        - Speed Index:              3.5 s
+        - Total Blocking Time:      570 ms
+        - Largest Contentful Paint: 10.6 s
+        - Cumulative Layout Shift:  0.292
+
+    Passed audits:
+        - Eliminate render-blocking resources - Potential savings of 0 ms
+        - Defer offscreen images
+        - Minify CSS
+        - Minify JavaScript - Potential savings of 221 KiB
+        - Reduce unused CSS
+        - Efficiently encode images - Potential savings of 90 KiB
+        - Enable text compression
+        - Preconnect to required origins
+        - Initial server response time was short - Root document took 260 ms
+        - Avoid multiple pages redirects
+        - Use HTTP/2
+        - Use video formats for animated content
+        - Remove duplicate modules in JavaScript bundles
+        - Avoid serving legacy JavaScript to modern browsers - Potential savings of 0 KiB
+        - Preload Largest Contentful Paint image
+        - Uses efficient cache policy on static assets - 0 resources found
+        - Avoids an excessive DOM size - 763 elements
+        - JavaScript execution time - 0.5 s
+        - All text remains visible during webfont loads
+        - Minimize third-party usage - Third-party code blocked the main thread for 0 ms
+        - Largest Contentful Paint image was not lazily loaded
+        - Uses passive listeners to improve scrolling performance
+        - Avoids document.write()
+        - Has a <meta name="viewport"> tag with width or initial-scale
+        - Avoids unload event listeners
