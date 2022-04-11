@@ -23,13 +23,19 @@
 .banner_description {
   padding-top: 2.3vh;
   padding-bottom: 1vh;
-  font-size: 2vh;
+  font-size: 1.3rem;
   max-width: 30vw;
+  overflow-y: scroll;
+  max-height: 18vh;
   line-height: 2.5vh;
   -webkit-text-stroke: 0.08vh #2b3e4d;
   text-align: justify;
   text-shadow: 0.1rem 0.1rem #0C151C;
 }
+
+.banner_description::-webkit-scrollbar {
+  display: none; 
+} 
 
 .banner_button:hover {
   background-color: #e07b39cc;
