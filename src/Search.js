@@ -15,7 +15,7 @@ function AllMovies({ fetchUrl, searchParam }) {
       // async can't be used right inside a useEffect function
       const request = await axios.get(fetchUrl); // await is to tell the program to wait for the response of the server
       setMovies(request.data.results);
-      console.log(request); // to log it and see what we are getting back
+      // console.log(request); // to log it and see what we are getting back
       return request;
     }
     fetchData(); // so this is the way to solve it
